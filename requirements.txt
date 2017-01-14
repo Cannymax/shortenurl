@@ -1,0 +1,2 @@
+short_url
+Django==1.8
