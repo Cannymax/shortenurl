@@ -13,4 +13,4 @@ def redirect(request, short_url_key):
         a_short_url = ShortUrl.objects.get(id=a_short_id)
         return HttpResponsePermanentRedirect(a_short_url.url)
 
-    return HttpResponse("잘못된 URL 요청입니다.")
+    return HttpResponse("Bad Request :(")
