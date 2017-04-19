@@ -1,8 +1,8 @@
-# shortenurl
+# Shorten url
 
-Django-based shorten url service.
+A Django-based shorten url service.
 
-# how to use
+# How to use
 1. checkout
 2. ./manage.py makemigrations
 3. ./manage.py migrate
