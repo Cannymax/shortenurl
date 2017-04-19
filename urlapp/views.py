@@ -13,4 +13,4 @@ def redirect(request, short_url_key):
         a_short_url = ShortUrl.objects.get(seed=seed_key)
         return HttpResponsePermanentRedirect(a_short_url.url)
 
-    return HttpResponse("Wrong Request.")
+    return HttpResponse("Bad Request :(")
