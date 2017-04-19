@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.http import HttpResponse
-from urlapp.models import ShortUrl
 from django.http import HttpResponsePermanentRedirect
+from .models import ShortUrl
 import short_url
 
 

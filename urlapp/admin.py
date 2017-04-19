@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from urlapp.models import ShortUrl, ShortIndex
+from .models import ShortUrl, ShortIndex
 
 
 class ShortIndexAdmin(admin.ModelAdmin):

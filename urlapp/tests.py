@@ -1,5 +1,5 @@
 from django.test import TestCase
-from urlapp.models import ShortUrl, ShortIndex
+from .models import ShortUrl, ShortIndex
 import short_url
 
 
