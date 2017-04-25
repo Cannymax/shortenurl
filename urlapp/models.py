@@ -2,6 +2,7 @@
 import sys
 from django.db import models
 from django.utils import timezone
+from .constants import SHORTEN_URL_MIN_LENGTH
 import short_url
 
 reload(sys)
@@ -23,7 +24,7 @@ class ShortIndex(models.Model):
 
 class ShortUrl(models.Model):
     url = models.CharField(u'URL', max_length=500, help_text=u'URL')
-    seed = models.BigIntegerField(u'Seed', default=100, help_text=u'Seed')
+    seed = models.BigIntegerField(u'Seed', help_text=u'Seed(생성시 미입력)')
     short_url = models.CharField(u'SHORT URL', null=True, blank=True, max_length=50, help_text=u'short url(생성시 미입력)')
     description = models.CharField(u'설명', max_length=50, null=True, blank=True)
 
@@ -35,7 +36,7 @@ class ShortUrl(models.Model):
         d.increase()
 
         self.seed = d.seed_cnt
-        self.short_url = short_url.encode_url(d.seed_cnt)
+        self.short_url = short_url.encode_url(d.seed_cnt, SHORTEN_URL_MIN_LENGTH)
 
         super(ShortUrl, self).save(*args, **kwargs)
 
