@@ -4,10 +4,12 @@ from .models import ShortUrl, ShortIndex
 
 
 class ShortIndexAdmin(admin.ModelAdmin):
+    readonly_fields = ('seed_cnt',)
     list_display = ('id', 'seed_cnt')
 
 
 class ShortUrlAdmin(admin.ModelAdmin):
+    readonly_fields = ('seed', 'short_url')
     list_display = ('id', 'seed', 'short_url', 'url')
 
     # def save_model(self, request, obj, form, change):
