@@ -123,4 +123,3 @@ Temporary Items
 migrations
 
 db.sqlite3
-production.py
