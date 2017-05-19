@@ -5,6 +5,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'DEBUG_SECRET'
+
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
