@@ -5,6 +5,8 @@ SECRET_KEY = get_env_variable("SECRET_KEY_SHORTENURL")
 DB_NAME = get_env_variable("DB_NAME")
 DB_USER = get_env_variable("DB_USER")
 DB_PASSWD = get_env_variable("DB_PASSWD")
+DB_HOST = get_env_variable("DB_HOST")
+DB_PORT = get_env_variable("DB_PORT")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -22,7 +24,7 @@ DATABASES = {
         'NAME': DB_NAME,
         'USER': DB_USER,
         'PASSWORD': DB_PASSWD,
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'HOST': DB_HOST,
+        'PORT': DB_PORT,
     }
 }
